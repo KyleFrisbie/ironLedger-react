@@ -12,10 +12,10 @@ Meteor.startup(() => {
 		_.times(5000, () => {
 			Workouts.insert({
 				'createdBy': faker.name.firstName(),
-				'createdOn': faker.date,
-				'fitnessType': faker.lorem.word,
-				'name': faker.words,
-				'image': faker.image.imageUrlt
+				'createdOn': faker.date.past(),
+				'fitnessType': faker.lorem.word(),
+				'name': faker.lorem.words(),
+				'imageUrl': faker.image.image()
 			});
 		});
 	}
