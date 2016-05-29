@@ -1,4 +1,7 @@
 import React from 'react';
+import {createContainer} from 'meteor/react-meteor-data';
+
+import {Workouts} from '../../imports/collections/workouts';
 
 const WorkoutList = () => {
 	return (
@@ -10,4 +13,10 @@ const WorkoutList = () => {
 	);
 };
 
-export default WorkoutList;
+export default createContainer(() => {
+	// set up subscription
+	Meteor.subscribe('workouts');
+
+	// return an object, sent to WorkoutList as props
+	return {workouts: Workouts.find({}).fetch()};
+}, WorkoutList);
