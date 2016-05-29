@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import WorkoutList from './components/workout_list';
+
 const App = () => {
 	return (
-		<div>Iron Ledger</div>
+		<div>
+			<div>Iron Ledger</div>
+			<WorkoutList />
+		</div>
 	);
 };
 
