@@ -3,11 +3,11 @@ import {createContainer} from 'meteor/react-meteor-data';
 
 import {Workouts} from '../../imports/collections/workouts';
 
-const WorkoutList = () => {
+const WorkoutList = (props) => {
 	return (
 		<div>
 			<div className="workout-list">
-				Workout List
+				
 			</div>
 		</div>
 	);

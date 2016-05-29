@@ -10,15 +10,13 @@ Meteor.startup(() => {
 	const numberOfWorkoutRecords = Workouts.find({}).count();
 	if (!numberOfWorkoutRecords) {
 		_.times(5000, () => {
-			const fakeWorkout = {
+			Workouts.insert({
 				'createdBy': faker.name.firstName(),
 				'createdOn': faker.date,
 				'fitnessType': faker.lorem.word,
 				'name': faker.words,
-				'image': faker.image.imageUrl
-			};
-
-			Workouts.insert({fakeWorkout});
+				'image': faker.image.imageUrlt
+			});
 		});
 	}
 });
