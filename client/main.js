@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
-import WorkoutList from './components/workout_list';
+import App from './components/app';
+import WorkoutList from './components/workouts/workout_list';
 
-const App = () => {
-	return (
-		<div>
-			<div>Iron Ledger</div>
-			<WorkoutList />
-		</div>
-	);
-};
+const routes = (
+	<Router history={browserHistory}>
+		<Route path="/" component={App}>
+			<IndexRoute component={WorkoutList} />
+		</Route>
+	</Router>
+);
 
 // Render app in the DOM after Meteor loads in the browser
 Meteor.startup(() => {
 	// React render call
-	ReactDOM.render(<App />, document.querySelector('.container'));
+	ReactDOM.render(routes, document.querySelector('.container'));
 });

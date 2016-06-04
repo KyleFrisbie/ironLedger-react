@@ -1,4 +1,8 @@
 // Declare workout collection
 import {Mongo} from 'meteor/mongo';
+import WorkoutSchema from '../schemas/workouts_schema';
 
-export const Workouts = new Mongo.Collection('workouts');
+const Workouts = new Mongo.Collection('workouts');
+Workouts.attachSchema(WorkoutSchema);
+
+export default Workouts;
