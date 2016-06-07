@@ -4,11 +4,13 @@ import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 
 import App from './components/app';
 import WorkoutList from './components/workouts/workout_list';
+import ExerciseList from './components/exercises/exercise_list';
 
 const routes = (
 	<Router history={browserHistory}>
 		<Route path="/" component={App}>
 			<IndexRoute component={WorkoutList} />
+			<Route path="exercises" component={ExerciseList} />
 		</Route>
 	</Router>
 );

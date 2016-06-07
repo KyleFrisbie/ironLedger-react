@@ -17,7 +17,7 @@ Meteor.startup(() => {// Generate dummy data if no data is present
 				// userId: '1',
 				// publishDate: new Date(),
 				name: 'Bench Press',
-				bodyPart: 'chest'
+				targetMuscles: 'chest'
 			}
 		);
 		Exercises.insert(
@@ -26,7 +26,7 @@ Meteor.startup(() => {// Generate dummy data if no data is present
 				// userId: '1',
 				// publishDate: new Date(),
 				name: 'Barbell Bicep Curl',
-				bodyPart: 'biceps'
+				targetMuscles: 'biceps'
 			}
 		);
 		Exercises.insert(
@@ -35,7 +35,7 @@ Meteor.startup(() => {// Generate dummy data if no data is present
 				// userId: '1',
 				// publishDate: new Date(),
 				name: 'Sit-up',
-				bodyPart: 'abdominals'
+				targetMuscles: 'abdominals'
 			}
 		);
 		Exercises.insert(
@@ -44,7 +44,7 @@ Meteor.startup(() => {// Generate dummy data if no data is present
 				// userId: '1',
 				// publishDate: new Date(),
 				name: 'Squat',
-				bodyPart: 'legs'
+				targetMuscles: 'legs'
 			}
 		)
 	}

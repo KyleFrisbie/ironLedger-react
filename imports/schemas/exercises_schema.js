@@ -25,7 +25,7 @@ const ExerciseSchema = new SimpleSchema({
     label: "Exercise Name",
     max: 200
   },
-  bodyPart: {
+  targetMuscles: {
     type: String,
     label: "Body Part/Muscle Group",
     optional: true

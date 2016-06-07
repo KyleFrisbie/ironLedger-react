@@ -12,10 +12,13 @@ class Header extends Component {
 				</div>
 				<ul className="nav navbar-nav">
 					<li>
-						<a href="#">Exercises</a>
+						<Link to="/">Workouts</Link>
 					</li>
 					<li>
-						<a href="#">Workouts</a>
+						<Link to="/exercises">Exercises</Link>
+					</li>
+					<li>
+						<Accounts />
 					</li>
 				</ul>
 			</nav>
